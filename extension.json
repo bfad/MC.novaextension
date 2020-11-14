@@ -1,0 +1,59 @@
+{
+    "identifier": "net.monkware.mc",
+    "organization": "MonkWare",
+    "name": "Multiple Cursors",
+    "description": "Commands to manage creation of multiple cursors",
+    "version": "1.0",
+    "categories": ["commands"],
+    "license": "Apache 2.0",
+    
+    "homepage": "https://github.com/bfad/MC.novaextension",
+    "bugs": "https://github.com/bfad/MC.novaextension/issues",
+    "repository": "https://github.com/bfad/MC.novaextension",
+    
+    "main": "main.js",
+    
+    "activationEvents": ["*"],
+    "entitlements": {},
+    
+    "commands": {
+        "editor": [
+            {
+                "title": "Add Cursor Next Line",
+                "command": "mc.addCursorNextLine",
+                "when": "editorHasFocus && !editorHasSelection",
+                "shortcut": "ctrl-shift-down-arrow"
+            },
+            {
+                "title": "Add Cursor Previous Line",
+                "command": "mc.addCursorPreviousLine",
+                "when": "editorHasFocus && !editorHasSelection",
+                "shortcut": "ctrl-shift-up-arrow"
+            },
+            {
+                "title": "Select Next Occurrence",
+                "command": "mc.selectNextOccurrence",
+                "when": "editorHasSelection",
+                "shortcut": "opt-n"
+            },
+            {
+                "title": "Clear Last While Selecting Next",
+                "command": "mc.clearLastThenNextOccurrence",
+                "when": "editorHasSelection",
+                "shortcut": "opt-shift-n"
+            },
+            {
+                "title": "Select Previous Occurrence",
+                "command": "mc.selectPreviousOccurrence",
+                "when": "editorHasSelection",
+                "shortcut": "opt-p"
+            },
+            {
+                "title": "Select Previous While Clearing First",
+                "command": "mc.clearFirstAndSelectPreviousOccurrence",
+                "when": "editorHasSelection",
+                "shortcut": "opt-shift-p"
+            }
+        ]
+    }
+}
